@@ -1,6 +1,18 @@
 package com.A306.runnershi.Model
 
-class User {
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "user_table")
+data class User (
+    var token:String? = null,
+    var userId:String? = null,
+    var userName:String? = null,
+    var runningType:Int = 0
+){
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null
+}
 //    var accessToken:String = ""
 //    var refreshToken:String = ""
 //    var nickname:String = ""
@@ -11,4 +23,3 @@ class User {
 //        this.refreshToken = refreshToken
 //        this.nickname = nickname
 //    }
-}
